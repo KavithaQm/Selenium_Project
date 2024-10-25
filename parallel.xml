@@ -1,0 +1,25 @@
+<suite name="parallelSuite" thread-count="2" parallel="tests">
+	
+	<listeners>
+		<listener class-name="utilities.ExtentReportManager" />
+		
+	</listeners>
+	
+  
+  <test name="chromeparalleltest1">
+    <parameter name="os" value="windows" />
+    <parameter name="browser" value="chrome" />
+    <classes>
+      <class name="testCases.TC001_RegistrationTest" />
+    </classes>
+  </test> 
+  
+  <test name="chromeparalleltest2">
+    <parameter name="os" value="windows" />
+    <parameter name="browser" value="chrome" />
+    <classes>
+      <class name="testCases.TC002_LoginTest" /> 
+    </classes>
+  </test>
+  
+</suite>
